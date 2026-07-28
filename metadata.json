@@ -1,0 +1,8 @@
+{
+  "name": "Revik Link",
+  "description": "App to control bike unlock via ESP32 BLE",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

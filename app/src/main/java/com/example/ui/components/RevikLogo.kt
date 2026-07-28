@@ -12,26 +12,20 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 @Composable
 fun RevikLogo(modifier: Modifier = Modifier, color: Color) {
     Canvas(modifier = modifier) {
-        val strokeWidth = size.width * (4.5f / 24f)
+        val strokeWidth = size.width * (5f / 24f)
         val scaleX = size.width / 24f
         val scaleY = size.height / 24f
         
         val path1 = Path().apply {
-            moveTo(8f * scaleX, 4f * scaleY)
-            lineTo(10f * scaleX, 2f * scaleY)
-            lineTo(14f * scaleX, 2f * scaleY)
-            lineTo(22f * scaleX, 10f * scaleY)
-            lineTo(22f * scaleX, 14f * scaleY)
-            lineTo(20f * scaleX, 16f * scaleY)
+            moveTo(10f * scaleX, 4f * scaleY)
+            lineTo(20f * scaleX, 4f * scaleY)
+            lineTo(20f * scaleX, 14f * scaleY)
         }
         
         val path2 = Path().apply {
-            moveTo(16f * scaleX, 20f * scaleY)
-            lineTo(14f * scaleX, 22f * scaleY)
-            lineTo(10f * scaleX, 22f * scaleY)
-            lineTo(2f * scaleX, 14f * scaleY)
-            lineTo(2f * scaleX, 10f * scaleY)
-            lineTo(4f * scaleX, 8f * scaleY)
+            moveTo(14f * scaleX, 20f * scaleY)
+            lineTo(4f * scaleX, 20f * scaleY)
+            lineTo(4f * scaleX, 10f * scaleY)
         }
         
         drawPath(
@@ -40,7 +34,7 @@ fun RevikLogo(modifier: Modifier = Modifier, color: Color) {
             style = Stroke(
                 width = strokeWidth,
                 cap = StrokeCap.Round,
-                join = StrokeJoin.Miter
+                join = StrokeJoin.Bevel
             )
         )
         
@@ -50,7 +44,7 @@ fun RevikLogo(modifier: Modifier = Modifier, color: Color) {
             style = Stroke(
                 width = strokeWidth,
                 cap = StrokeCap.Round,
-                join = StrokeJoin.Miter
+                join = StrokeJoin.Bevel
             )
         )
     }
